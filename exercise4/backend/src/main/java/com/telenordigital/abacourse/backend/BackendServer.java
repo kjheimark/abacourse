@@ -3,7 +3,6 @@ package com.telenordigital.abacourse.backend;
 import com.telenordigital.abacourse.backend.database.DatabaseManager;
 import com.telenordigital.abacourse.backend.smsclient.SmsClient;
 import java.net.URI;
-import java.time.ZonedDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
@@ -65,7 +64,6 @@ public class BackendServer {
 
 
     public static void main(final String[] args) throws Exception {
-        System.out.println("Hello World at " + ZonedDateTime.now() + "!");
         final DatabaseManager databaseManager = createDatabaseManager();
         final SmsClient smsClient = createSmsClient();
         final Application application = createApplication(smsClient, databaseManager);

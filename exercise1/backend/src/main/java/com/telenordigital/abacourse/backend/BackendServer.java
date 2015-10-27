@@ -1,6 +1,5 @@
 package com.telenordigital.abacourse.backend;
 
-import java.time.ZonedDateTime;
 import java.util.logging.Logger;
 import javax.ws.rs.core.Application;
 import org.eclipse.jetty.server.ConnectionFactory;
@@ -59,11 +58,6 @@ public class BackendServer {
 
 
     public static void main(final String[] args) throws Exception {
-
-        // Exercise 1
-        System.out.println("Hello World at " + ZonedDateTime.now() + "!");
-
-        // Exercise 2
         final Application application = createApplication();
         final ResourceConfig config = ResourceConfig.forApplication(application)
                 .packages("com.telenordigital.abacourse.backend.rs");
